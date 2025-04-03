@@ -1,32 +1,18 @@
-const app = Vue.createApp({
-    template:"#app",
-    data(){
-        return{
-
-            title:"New Hello World",
-            link: "<a href='//youtube.com'>Link2</a>"
-        }
-
-    },
-
-    methods:{
-
-        handleChange(e){
-            this.title=e.target.value
-        },
-
-        handleClick(title,event){
-            this.title=title;
-            console.log(event);
-            
-        },
-
-        outerHandler(){console.log('outer')},
-        innerHandler(){console.log('inner')},
-        linkHandler(){console.log('link')}
-    }
-});
+const { createApp } = Vue;
+        createApp({
+            setup(){
+                const date = new Date().toLocaleString();
+                const grettings = 'Hello guys, today is ' +  date;
+                const isTrue = true;
+                const array = ['Francis','Jane'];
+                const obj = {car:'Ferrari'}
 
 
-
-app.mount("#root");
+                return {
+                    grettings,
+                    isTrue,
+                    array,
+                    obj
+                }
+            }
+        }).mount('#app')
