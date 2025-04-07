@@ -1,18 +1,16 @@
 const { createApp } = Vue;
         createApp({
             setup(){
-                const date = new Date().toLocaleString();
-                const grettings = 'Hello guys, today is ' +  date;
-                const isTrue = true;
-                const array = ['Francis','Jane'];
-                const obj = {car:'Ferrari'}
+                const message = () => "Message from function";
 
 
                 return {
-                    grettings,
-                    isTrue,
-                    array,
-                    obj
+                    message
+                }
+            },
+            methods:{
+                welcome(){
+                    return "Hello guys";
                 }
             }
         }).mount('#app')
