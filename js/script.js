@@ -1,18 +1,26 @@
-const { createApp } = Vue;
+const { createApp, ref, reactive } = Vue;
         createApp({
-            setup(){
-                const date = new Date().toLocaleString();
-                const grettings = 'Hello guys, today is ' +  date;
-                const isTrue = true;
-                const array = ['Francis','Jane'];
-                const obj = {car:'Ferrari'}
+            setup()
+            {
+                //let user = ref({
+                let user = reactive({
+                    name:'Viktor',
+                    occupation:'DEV',
+                    age:39
+                });
+
+                function UpdateAge(){
+                    setTimeout(()=>{
+                        user.age = 40;//reactive
+                        //user.value.age = 40;//ref
+                    },3000)
+                    
+
+                }
 
 
                 return {
-                    grettings,
-                    isTrue,
-                    array,
-                    obj
+                    UpdateAge,user
                 }
             }
         }).mount('#app')
