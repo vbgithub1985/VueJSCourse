@@ -11,6 +11,23 @@
 <body>
     <div id="app">
         
+        <p v-if="user.age < user.allowedAge">
+            You are not old enough
+        </p>
+        <p v-else-if="user.name === 'Viktor'">
+            Welcome back {{user.name}}
+        </p>
+        <p v-else>
+            You are not allowed
+        </p>
+        <hr/>
+        <p v-show="true">
+            Show it
+        </p>
+        <p v-show="false">
+            Don't show
+        </p>
+        
     </div>
 
     <script src="js/script.js"></script>
