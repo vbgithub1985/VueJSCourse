@@ -10,10 +10,13 @@
 </head>
 <body>
     <div id="app">
-        <p>{{grettings}}</p>
-        <p>Is it true: {{ isTrue ? 'Yes':'No'}}</p>
-            <p>{{array[0]}}</p>
-            <p>{{obj.car}}</p>
+        <img v-bind:src="image.src" v-bind:alt="image.alt">
+        <hr/>
+        <a v-bind:href="link">Go to google</a>
+        <hr/>
+        <p v-text="text"></p>
+        <hr/>
+        <p v-html="html"></p>
     </div>
 
     <script src="js/script.js"></script>

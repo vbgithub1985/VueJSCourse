@@ -1,18 +1,20 @@
-const { createApp } = Vue;
+const { createApp, ref } = Vue;
         createApp({
             setup(){
-                const date = new Date().toLocaleString();
-                const grettings = 'Hello guys, today is ' +  date;
-                const isTrue = true;
-                const array = ['Francis','Jane'];
-                const obj = {car:'Ferrari'}
+                let image = ref({
+                    src:"https://picsum.photos/200/300",
+                    alt:'An image'
+                })
 
+                const link = "https://google.com"
+                const text = "my text"
+                const html = "<strong>My html</strong>"
 
                 return {
-                    grettings,
-                    isTrue,
-                    array,
-                    obj
+                    image,
+                    link,
+                    text,
+                    html
                 }
             }
         }).mount('#app')
