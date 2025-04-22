@@ -10,7 +10,23 @@
 </head>
 <body>
     <div id="app">
-        
+        <ul>
+            <li v-for="(name, index) in names"> 
+                {{ name }}: {{ index }}
+            </li>
+        </ul>
+        </hr>
+        <ul>
+            <li v-for="(car, index) in cars"> 
+                {{ car.brand }}: {{ index }}
+            </li>
+        </ul>
+        </hr>
+        <ul>
+            <li v-for="(value, key, index) in user"> 
+               {{ index }} - {{ key }}: {{ value }}
+            </li>
+        </ul>
     </div>
 
     <script src="js/script.js"></script>
