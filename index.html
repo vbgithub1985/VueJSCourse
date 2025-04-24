@@ -10,7 +10,15 @@
 </head>
 <body>
     <div id="app">
-        
+        <h1> {{ name }} </h1>
+        <div v-on:dblclick="updateName">
+            Click me!!!
+        </div>
+        <hr/>
+        <form v-on:submit.prevent="handleForm">
+            <input/>
+            <button type="submit">Submit</button>
+        </form>
     </div>
 
     <script src="js/script.js"></script>
