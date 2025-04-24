@@ -6,12 +6,9 @@ const { createApp, ref } = Vue;
 
                 const name = ref('Viktor');
                 const coord = ref({x:0,y:0});
-                function updateName(){
-                    
-                    if (name.value == 'Helen')
-                        name.value = 'Viktor'
-                    else if (name.value == 'Viktor')
-                        name.value = 'Helen';
+                function updateName(newName,event){
+                    console.log(event)
+                    name.value = newName;
                 }
 
                 function handleForm(event){
